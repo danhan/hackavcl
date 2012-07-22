@@ -14,25 +14,30 @@
 
 </head>
 
-  <body>
+<body>
+    <div class="leaderboard">
+      <h1>Virtual Class Room</h1>
+    </div>
 
-      <form class="form-horizontal" action="/login" method="post">
+    <div class="container" width="50%" align="center">
+      <form class="form-horizontal" action="/login" method="post" align="center">
         <fieldset>
-          <legend>Please Login first</legend>
-          <div class="control-group">
-
+          <legend>Login</legend>
+          <div class="control-group" style="padding-left:30%">
+           <div class="control-group" style="width:30%">
             <label class="control-label" for="name">Student Name</label>
             <div class="controls">
-              <input type="text" class="input-xlarge" id="name" name="name">
+              <input type="text" class="input-xlarge" id="name" name="name" style="height: 25px">
             </div>
           </div>
-          <div class="control-group">
+          <div class="control-group" style="width:30%">
             <label class="control-label" for="password">Password</label>
 
             <div class="controls">
-              <input type="password" class="input-xlarge" id="password" name="password">
+              <input type="password" class="input-xlarge" id="password" name="password" style="height: 25px">
             </div>
           </div>
+         </div>
           <div class="form-actions">
             <button type="submit" class="btn btn-primary" data-toggle="button">Login</button>
             <button type="reset" class="btn">Reset</button>
@@ -40,7 +45,7 @@
           </div>
         </fieldset>
    </form>
-
-  </body>
+  </div>
+</body>
 
 </html>

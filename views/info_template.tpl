@@ -1,5 +1,6 @@
 <html>
 <head>
+<meta name="Instance page" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
     <style type="text/css">
       body {
@@ -22,11 +23,16 @@ function logout()
 </head>
 <body>
 
+    <div class="leaderboard">
+      <h1>Virtual Class Room</h1>
+    </div>
+    <div class="container" align="center">
       <form class="form-horizontal" action="/release" name="release_form" method="post"> 
         <fieldset>
-          <legend>Instance Access Information:
-            <input type="hidden" for="name" name="name" id="name" value="{{name}}">{{name}}</input></legend>
-
+          <legend>Instance Access Information for you:
+            <input type="hidden" for="name" name="name" id="name" value="{{name}}"><b>{{name}}</b></input></legend>
+ 
+         <div class="control-group" style="width:50%">
           <div class="control-group">
             <label class="control-label" for="instance_id">Instance ID</label>
             <label class="control-label" name="instance_id" id="instance_id">{{instance_id}}</label>
@@ -49,16 +55,18 @@ function logout()
           
           <div class="control-group">
              <label class="control-label" for="link">Access Link</label>
-             <div class="controls"><a href="url">{{url}}</a></div>
+             <a href="url" style="float: left;margin-top: 5px;margin-left: 15px">{{url}}</a>
           </div>
-
-          <div class="form-actions">
+        </div>
+        
+         <div class="form-actions">
             <button type="submit" class="btn btn-primary">Release</button>
             <button type="button" class="btn" onclick="logout()">Logout</button>
           </div>
         </fieldset>
    </form>
-  </body>
+  </div>
+</body>
 
     <script src="/bootstrap/js/bootstrap.js"></script>
     <script src="/bootstrap/js/bootstrp.min.js"></script>
