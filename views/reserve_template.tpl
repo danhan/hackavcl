@@ -9,12 +9,25 @@
     </style>
 <link rel="stylesheet" href="/bootstrap/css/bootstrap-responsive.css">
 
+<script type="text/javascript">
+function logout()
+{
+  var form1 = document.reserve_form;
+  form1.action='/logout';
+  form1.submit();
+}
+</script>
 
 </head>
   <body>
-       <form class="form-horizontal" action="/reserve" method="post">
+
+
+
+       <form class="form-horizontal" action="/reserve" method="post" name="reserve_form">
         <fieldset>
-          <legend>Reserve your Instance</legend>
+          <legend>Reserve your Instance:
+            <input type="hidden" for="name" name="name" id="name" value="{{name}}">{{name}}</input>
+          </legend>
 
           <div class="control-group">
             <label class="control-label" for="image">Image Type</label>
@@ -52,8 +65,8 @@
           </div>  
  
           <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Reserve</button>
-            <button class="btn">Cancel</button>
+            <button type="submit" class="btn btn-primary" data-toggle="button">Reserve</button>
+            <button type="button" class="btn" onclick="logout()">Logout</button>
           </div>
 
         </fieldset>

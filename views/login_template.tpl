@@ -1,6 +1,7 @@
-
 <html>
 <head>
+<title>Login</title>
+<meta name="login page" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
     <style type="text/css">
       body {
@@ -22,20 +23,19 @@
 
             <label class="control-label" for="name">Student Name</label>
             <div class="controls">
-              <input type="text" class="input-xlarge" id="name">
-
+              <input type="text" class="input-xlarge" id="name" name="name">
             </div>
           </div>
           <div class="control-group">
             <label class="control-label" for="password">Password</label>
 
             <div class="controls">
-              <input type="password" class="input-xlarge" id="password">
+              <input type="password" class="input-xlarge" id="password" name="password">
             </div>
           </div>
           <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Login</button>
-            <button class="btn">Cancel</button>
+            <button type="submit" class="btn btn-primary" data-toggle="button">Login</button>
+            <button type="reset" class="btn">Reset</button>
 
           </div>
         </fieldset>
