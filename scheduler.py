@@ -34,8 +34,8 @@ def create_instance(reservation_length):
  	syslog.syslog(syslog.LOG_ERR, 'Server destruction time for ' + str(server.id) + ' is ' + str(later))
 	# Schedule the server for deletion later
 	job = sched.add_date_job(kill_instance, later, [server.id])
-	print str(job)
 	if job:
+ 		syslog.syslog(syslog.LOG_ERR, 'Kill job for server ' + str(server.id) + ' is ' + str(job))
 		return str(ip)
 	else:
  		syslog.syslog(syslog.LOG_ERR, 'Server destruction job for ' + str(server.id) + ' failed')

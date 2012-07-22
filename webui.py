@@ -27,7 +27,8 @@ def reserve():
    time_span = request.forms.get('time_span')
        
    # create instance
-   ip = create_instance(image,time_span)
+   #ip = create_instance(image,time_span)
+   ip = callnova("test","test",4)
    if ip != '':
       return template('info_template', ip=ip)
    else:
@@ -63,4 +64,4 @@ def check_login(name,password):
 
 
 
-run(host='localhost', port=8080)
+run(host='10.0.2.15', port=8080)

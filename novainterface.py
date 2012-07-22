@@ -12,4 +12,4 @@ def callnova(name, password,reservation_length):
 	cmd0 = 'echo Reservation Legnth : '+ str(reservation_length) + '> userinfo'
 	os.system(cmd0)
 
-	return ip_addresse
+	return ip_address

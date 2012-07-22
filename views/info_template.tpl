@@ -13,11 +13,11 @@
         </tr>
         <tr> 
           <td><label for="username">Username:</label></td>
-	  <td><span>admin</span></td>
+	  <td><span>cirros</span></td>
         </tr>
 	<tr>  
           <td><label for="ip">Password:</label></td>
-	  <td><span name="">password</span></td>
+	  <td><span name="">cubswin:)</span></td>
         </tr>
 
       <table/>
