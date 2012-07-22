@@ -1,67 +1,62 @@
 <html>
+<head>
+<link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+<link rel="stylesheet" href="/bootstrap/css/bootstrap-responsive.css">
 
-<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 
+</head>
   <body>
-  	<h1>Reserve your Instances</h1>
-    <form id="data_form" action="/reserve" method="post" align="left">
+       <form class="form-horizontal" action="/reserve" method="post">
+        <fieldset>
+          <legend>Reserve your Instance</legend>
 
-      <table align="left">
+          <div class="control-group">
+            <label class="control-label" for="image">Image Type</label>
+            <div class="controls">
+              <select id="image" name="image">
+                <option value="matlab">matlab</option>
+                <option value="hadoop">hadoop</option>
+              </select>
+            </div>
+          </div>
 
-        <tr>
-          <td><label for="image">Image Type:</label></td>
-	 <td><select id="image" name="image">	
-		<option value="matlab">matlab</option>
-		<option value="hadoop">hadoop</option>
-	    </select>
-         </td></tr>
+          <div class="control-group">
+            <label class="control-label" for="quota">Available Quota:</label>
+            <div class="controls">
+              <select id="quota_selector" name="quota">
+                 <option value="tiny" onclick="quotaRefresh()">Tiny Instance</option>
+                 <option value="small" onclick="quotaRefresh()">Small Instance</option>
+                 <option value="medium" onclick="quotaRefresh()">Medium Instance</option>
+                 <option value="large" onclick="quotaRefresh()">Large Instance</option>
+             </select>
+            </div>
+          </div>
 
-        <tr>
-          <td><label for="quota">Available Quota:</label></td>
-          <td><span id="quota"/> 4 </td>
-          <td><select id="quota_selector">
-             <option value="tiny" onclick="quotaRefresh()">Tiny Instance</option>
-             <option value="small" onclick="quotaRefresh()">Small Instance</option>
-             <option value="medium" onclick="quotaRefresh()">Medium Instance</option>
-             <option value="large" onclick="quotaRefresh()">Large Instance</option>
-	  </select></td>
-        </tr>
+          <div class="control-group">
+            <label class="control-label" for="time_span">Time Span:</label>
+            <div class="controls">
+              <select id="time_span" name="time_span">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+              <!--<span class="label help-info">hour</span>-->
+          </div>  
+ 
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Reserve</button>
+            <button class="btn">Cancel</button>
+          </div>
 
-    	<tr>
-          <td><label for="time_span">Time Span:</label></td>
-          <td><select id="time_span" name="time_span">
-		<option value="1">1</option>
-		<option value="2">2</option>
-		<option value="3">3</option>
-		<option value="4">4</option>
-	  </select></td>
-	  <td><span>hour</span></td>
-	</tr>	
-
-        <tr>
-          <td class="button"><input id="submit" type="submit" value="reserve" /></td>
-        </tr>
-
-      <table/>
-
-    </form>
-
-<script type="text/javascript">
-
-function quotaRefresh(){
-  alert("test");
-  //var reserve_form = document.getElementById("data_form");
-  //document.getElementById("quota_selector").onchange = function(){
-  //alert('testing')
- // myDiv.style.display = (this.selectedIndex == 0) ? "block" : "none";
-}
-
-
-</script>
-
-
-
-
-  </body>
-
+        </fieldset>
+   </form>
+</body>
 </html>

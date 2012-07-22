@@ -1,29 +1,43 @@
 <html>
+<head>
+<link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
 
-  <body>
+<link rel="stylesheet" href="/bootstrap/css/bootstrap-responsive.css"> 
+</head>
+<body>
 
-  	<h1>Access Instance Information</h1>
+      <form class="form-horizontal">
+        <fieldset>
+          <legend>Instance Access Information</legend>
 
-    <div>
-      <table align="left">
+          <div class="control-group">
+            <label class="control-label" for="ip">IP Address</label>
+            <label class="control-label">{{ip}}</label>
+          </div>
 
-        <tr>
-          <td><label for="ip">IP Address:</label></td>
-	  <td><span>{{ip}}</span></td>
-        </tr>
-        <tr> 
-          <td><label for="username">Username:</label></td>
-	  <td><span>admin</span></td>
-        </tr>
-	<tr>  
-          <td><label for="ip">Password:</label></td>
-	  <td><span name="">password</span></td>
-        </tr>
+          <div class="control-group">
+            <label class="control-label" for="user">User Name</label>
+	    <label class="control-label">admin</label>
+          </div>
 
-      <table/>
+          <div class="control-group">
+            <label class="control-label" for="password">Password</label>
+            <label class="control-label">password</label>
+          </div>
 
-    </div>
-    
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">logout</button>
+          </div>
+        </fieldset>
+   </form>
+
+
 
   </body>
 
