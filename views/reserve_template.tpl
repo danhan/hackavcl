@@ -41,6 +41,7 @@ function logout()
                 <option value="matlab">matlab</option>
                 <option value="hadoop">hadoop</option>
               </select>
+             <!-- <span class="help-inline">Operating System with the selected software</span> -->
             </div>
           </div>
          <!--

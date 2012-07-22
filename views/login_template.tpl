@@ -12,6 +12,19 @@
 
 <link rel="stylesheet" href="/bootstrap/css/bootstrap-responsive.css"> 
 
+<script type="text/javascript">
+function validateForm()
+{
+var name=document.login_form.name.value;
+var pwd=document.login_form.password.value;
+if (name==null || name=="" || pwd==null || pwd=="")
+  {
+  alert("Please Fill in Username and Password correctly!");
+  return false;
+  }
+}
+</script>
+
 </head>
 
 <body>
@@ -20,7 +33,7 @@
     </div>
 
     <div class="container" width="50%" align="center">
-      <form class="form-horizontal" action="/login" method="post" align="center">
+      <form class="form-horizontal" action="/login" method="post" name="login_form" align="center" onsubmit="return validateForm()">
         <fieldset>
           <legend>Login</legend>
           <div class="control-group" style="padding-left:30%">
