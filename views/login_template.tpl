@@ -1,45 +1,45 @@
 
 <html>
+<head>
+<link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+
+<link rel="stylesheet" href="/bootstrap/css/bootstrap-responsive.css"> 
+
+</head>
 
   <body>
 
-  	<h1>Please Login first</h1>
+      <form class="form-horizontal" action="/login" method="post">
+        <fieldset>
+          <legend>Please Login first</legend>
+          <div class="control-group">
 
-    <form action="/login" method="post">
+            <label class="control-label" for="name">Student Name</label>
+            <div class="controls">
+              <input type="text" class="input-xlarge" id="name">
 
-      <table align="left">
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="password">Password</label>
 
-        <tr>
+            <div class="controls">
+              <input type="password" class="input-xlarge" id="password">
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Login</button>
+            <button class="btn">Cancel</button>
 
-          <td><label for="name">Name:</label></td>
-
-          <td><input type="text" name="name" id="name" /> </td>
-
-        </tr>
-
-
-
-        <tr>
-
-          <td><label for="password">Password:</label></td>
-
-          <td><input type="password" name="password" id="password" /></td>
-
-        </tr>
-
-        
-
-        <tr>
-
-          <td class="button"><input id="submit" type="submit" value="login" /></td>
-
-        </tr>
-
-      <table/>
-
-    </form>
-
-    
+          </div>
+        </fieldset>
+   </form>
 
   </body>
 

@@ -39,6 +39,7 @@ def add_class(name,image=""):
 
 def load_test_data():
     add_student("curtis", "c.collicutt@gmail.com")
+    add_student("dan", "dhan3@ualberta.ca")
     #add_flavor(os_id=1)
     f = Flavor.query.filter_by(os_id=1).one()
     t = ImageType.query.filter_by(name='linux').one()
